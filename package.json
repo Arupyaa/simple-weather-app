@@ -1,7 +1,7 @@
 {
-  "name": "webpack-template",
+  "name": "simple-weather-app",
   "version": "1.0.0",
-  "description": "webpack project template",
+  "description": "simple weather app for the odin project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Arupyaa/webpack-template.git"
+    "url": "git+https://github.com/Arupyaa/simple-weather-app.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "arupyaa",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Arupyaa/webpack-template/issues"
+    "url": "https://github.com/Arupyaa/simple-weather-app/issues"
   },
-  "homepage": "https://github.com/Arupyaa/webpack-template#readme",
+  "homepage": "https://github.com/Arupyaa/simple-weather-app#readme",
   "devDependencies": {
     "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.3",
