@@ -1,6 +1,12 @@
 import { Api } from "./API.js";
 
-let data = Api.grabData("cairo");
-data.then((obj) => {
-  if (obj.success) console.log(obj);
+const searchBar = document.querySelector("input");
+const form = document.querySelector("form");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let data = Api.grabData(searchBar.value);
+  data.then((obj) => {
+    if (obj.success) console.log(obj);
+  });
 });
