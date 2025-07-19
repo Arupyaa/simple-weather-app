@@ -68,7 +68,11 @@ const UI = (function () {
     locationUI.textContent = dataObj.location;
     feelslikeUI.textContent = "feels like: " + dataObj.feelslike;
     humidityUI.textContent = "humidity: " + dataObj.humidity;
-    precipUI.textContent = "precip: " + dataObj.precip;
+    if (dataObj.precip == null) {
+      precipUI.textContent = "precip:";
+    } else {
+      precipUI.textContent = "precip: " + dataObj.precip;
+    }
     addIcon(dataObj.icon);
   };
 
