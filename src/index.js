@@ -5,6 +5,8 @@ import "./index.css";
 const searchBar = document.querySelector("input");
 const form = document.querySelector("form");
 
+UI.UIinit();
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   let data = Api.grabData(searchBar.value);

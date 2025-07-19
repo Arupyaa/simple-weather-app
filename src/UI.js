@@ -31,6 +31,16 @@ const UI = (function () {
   const precipUI = document.querySelector(".precip");
   const errorUI = document.querySelector(".error");
 
+  const UIinit = function () {
+    tempUI.classList.add("hidden");
+    locationUI.classList.add("hidden");
+    iconUI.classList.add("hidden");
+    humidityUI.classList.add("hidden");
+    feelslikeUI.classList.add("hidden");
+    precipUI.classList.add("hidden");
+    errorUI.classList.add("hidden");
+  };
+
   const dataHandler = async function (data) {
     let dataObj = await data;
     if (!dataObj.success) {
@@ -53,7 +63,8 @@ const UI = (function () {
       feelslikeUI.classList.remove("hidden");
       precipUI.classList.remove("hidden");
     }
-    tempUI.textContent = dataObj.temp;
+    /* tempUI.textContent = dataObj.temp; */
+    tempUI.textContent = `${dataObj.temp} °C`;
     locationUI.textContent = dataObj.location;
     feelslikeUI.textContent = "feels like: " + dataObj.feelslike;
     humidityUI.textContent = "humidity: " + dataObj.humidity;
@@ -134,5 +145,5 @@ const UI = (function () {
         break;
     }
   }
-  return { dataHandler };
+  return { dataHandler, UIinit };
 })();
