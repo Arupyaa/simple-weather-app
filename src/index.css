@@ -15,10 +15,11 @@
   background-color: #58c8f4;
   border-radius: 10px;
   margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 0.2rem;
 }
 
 .display {
+  margin-top: 3rem;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -83,6 +84,15 @@
   white-space: nowrap;
 }
 
+.loading {
+  opacity: 0.4;
+  font-size: 2rem;
+}
+
 .hidden {
   display: none;
+}
+
+.notVisible {
+  visibility: hidden;
 }

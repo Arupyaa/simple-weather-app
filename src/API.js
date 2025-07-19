@@ -1,8 +1,11 @@
 export { Api };
 
 let Api = (function () {
+  const loadingUI = document.querySelector(".loading");
+
   let grabData = async function (location) {
     try {
+      loadingUI.classList.remove("notVisible");
       const url =
         "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" +
         location +
@@ -23,9 +26,11 @@ let Api = (function () {
         precip: responsePromise.currentConditions.precip,
         icon: responsePromise.currentConditions.icon,
       };
+      loadingUI.classList.add("notVisible");
       return returned;
     } catch (error) {
       console.error(error.message);
+      loadingUI.classList.add("notVisible");
       return { success: false };
     }
   };

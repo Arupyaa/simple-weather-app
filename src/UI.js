@@ -30,6 +30,7 @@ const UI = (function () {
   const feelslikeUI = document.querySelector(".feelslike");
   const precipUI = document.querySelector(".precip");
   const errorUI = document.querySelector(".error");
+  const loadingUI = document.querySelector(".loading");
 
   const UIinit = function () {
     tempUI.classList.add("hidden");
@@ -39,6 +40,7 @@ const UI = (function () {
     feelslikeUI.classList.add("hidden");
     precipUI.classList.add("hidden");
     errorUI.classList.add("hidden");
+    loadingUI.classList.add("notVisible");
   };
 
   const dataHandler = async function (data) {
