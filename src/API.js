@@ -6,7 +6,7 @@ let Api = (function () {
       const url =
         "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" +
         location +
-        "?unitGroup=metric&key=4MP5KZSG26GT2XSDUKZ9LDN7H&contentType=json";
+        "?unitGroup=metric&iconSet=icons2&key=4MP5KZSG26GT2XSDUKZ9LDN7H&contentType=json";
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
